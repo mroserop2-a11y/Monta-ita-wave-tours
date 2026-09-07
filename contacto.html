@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario académico de contacto y reserva de Montañita Wave Tours.">
+    <title>Contacto / Reserva | Montañita Wave Tours</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html" aria-label="Ir al inicio de Montañita Wave Tours">
+                <img src="images/logo.png" alt="Logotipo de Montañita Wave Tours">
+                <div>
+                    <span class="brand-name">Montañita Wave Tours</span>
+                    <span class="brand-tagline">Vive la costa, siente la aventura</span>
+                </div>
+            </a>
+
+            <nav class="main-nav" aria-label="Menú principal">
+                <a href="index.html">Inicio</a>
+                <a href="destinos.html">Lugares</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a class="active" href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow">Página 5 · Contacto / Reserva</p>
+                <h1>Planifica tu experiencia</h1>
+                <p>Formulario HTML5 de demostración. No procesa reservas ni pagos reales.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container contact-layout">
+                <div>
+                    <p class="eyebrow">Cuéntanos tu plan</p>
+                    <h2>Solicita información</h2>
+                    <p>
+                        Completa los campos requeridos para simular una solicitud turística.
+                        El formulario es únicamente visual y académico.
+                    </p>
+
+                    <div class="notice">
+                        <strong>Importante:</strong>
+                        No se almacenan ni envían datos. El botón cumple una función
+                        demostrativa dentro del proyecto HTML5 + CSS3.
+                    </div>
+                </div>
+
+                <form class="contact-form" action="#" method="get">
+                    <div class="form-grid">
+
+                        <div class="form-field">
+                            <label for="nombre">Nombre</label>
+                            <input id="nombre" name="nombre" type="text" required placeholder="Nombre completo">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="correo">Correo electrónico</label>
+                            <input id="correo" name="correo" type="email" required placeholder="nombre@correo.com">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="telefono">Teléfono</label>
+                            <input id="telefono" name="telefono" type="tel" required placeholder="09XXXXXXXX">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="fecha">Fecha</label>
+                            <input id="fecha" name="fecha" type="date" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="actividad">Destino o actividad</label>
+                            <select id="actividad" name="actividad" required>
+                                <option value="">Seleccione</option>
+                                <option>Playa de Montañita</option>
+                                <option>La Punta / Surf</option>
+                                <option>Estero de Montañita</option>
+                                <option>Ruta gastronómica</option>
+                                <option>Paseo por el centro</option>
+                                <option>Atardecer y fotografía</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="personas">Número de personas</label>
+                            <input id="personas" name="personas" type="number" min="1" max="20" value="1" required>
+                        </div>
+
+                        <div class="form-field form-field-full">
+                            <label for="servicio">Tipo de servicio</label>
+                            <select id="servicio" name="servicio" required>
+                                <option value="">Seleccione</option>
+                                <option>Alojamiento</option>
+                                <option>Tour gastronómico</option>
+                                <option>Tour cultural</option>
+                                <option>Tour de aventura / surf</option>
+                                <option>Paquete de fin de semana</option>
+                                <option>Excursión de un día</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field form-field-full">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Escribe aquí tu consulta"></textarea>
+                        </div>
+
+                    </div>
+
+                    <button class="btn btn-primary submit-btn" type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <strong>Montañita Wave Tours</strong>
+                <p>Vive la costa, siente la aventura.</p>
+            </div>
+
+            <div>
+                <h2 class="footer-title">Navegación</h2>
+                <a href="index.html">Inicio</a>
+                <a href="destinos.html">Lugares</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
+            <div>
+                <h2 class="footer-title">Destino</h2>
+                <p>Montañita – Santa Elena, Ecuador</p>
+                <p>Proyecto académico · 2026</p>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            © 2026 Montañita Wave Tours. Proyecto académico.
+        </div>
+    </footer>
+</body>
+</html>
