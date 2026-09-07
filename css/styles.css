@@ -1,0 +1,752 @@
+/* =========================================================
+   MONTAÑITA WAVE TOURS
+   Hoja de estilos principal - HTML5 + CSS3
+   ========================================================= */
+
+:root {
+    --navy: #073b4c;
+    --navy-dark: #042d3a;
+    --teal: #118a8a;
+    --aqua: #49c6c8;
+    --sand: #f5ead7;
+    --coral: #ef6f51;
+    --sun: #f5b942;
+    --white: #ffffff;
+    --ink: #17313a;
+    --muted: #60757d;
+    --soft: #f7faf9;
+    --border: #dce7e5;
+    --shadow: 0 18px 45px rgba(7, 59, 76, 0.12);
+    --radius: 20px;
+    --max-width: 1180px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.65;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.15;
+}
+
+.container {
+    width: min(92%, var(--max-width));
+    margin-inline: auto;
+}
+
+/* =======================
+   Encabezado y navegación
+   ======================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 8px 25px rgba(7, 59, 76, 0.06);
+}
+
+.nav-wrap {
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.brand img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.brand-name,
+.brand-tagline {
+    display: block;
+}
+
+.brand-name {
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+}
+
+.brand-tagline {
+    font-size: 0.78rem;
+    color: var(--muted);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.main-nav a {
+    padding: 10px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--navy);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus,
+.main-nav a.active {
+    color: var(--white);
+    background: var(--teal);
+    transform: translateY(-1px);
+    outline: none;
+}
+
+/* =======================
+   Hero de inicio
+   ======================= */
+
+.hero {
+    position: relative;
+    min-height: 640px;
+    display: grid;
+    align-items: center;
+    color: var(--white);
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/da/Atardecer_en_Monta%C3%B1ita.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(4, 45, 58, 0.86), rgba(4, 45, 58, 0.35));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+    padding-block: 90px;
+}
+
+.hero h1,
+.page-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    margin-bottom: 22px;
+    letter-spacing: -0.035em;
+}
+
+.hero-text {
+    max-width: 680px;
+    font-size: 1.18rem;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.eyebrow {
+    margin-bottom: 10px;
+    color: var(--coral);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.hero .eyebrow,
+.page-hero .eyebrow,
+.photo-band .eyebrow {
+    color: #ffd081;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+/* =======================
+   Botones
+   ======================= */
+
+.btn {
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    padding: 12px 22px;
+    text-decoration: none;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(7, 59, 76, 0.18);
+    outline: 3px solid rgba(73, 198, 200, 0.25);
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    background: var(--coral);
+    color: var(--white);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: #d9573b;
+}
+
+.btn-outline {
+    border-color: var(--white);
+    color: var(--white);
+    background: transparent;
+}
+
+.btn-small {
+    padding: 9px 16px;
+    background: var(--teal);
+    color: var(--white);
+}
+
+.btn-light {
+    background: var(--white);
+    color: var(--navy);
+}
+
+/* =======================
+   Secciones
+   ======================= */
+
+.section {
+    padding: 78px 0;
+}
+
+.section-soft {
+    background: var(--soft);
+}
+
+.section-heading {
+    max-width: 780px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    margin-bottom: 14px;
+}
+
+.split-heading {
+    max-width: none;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    text-align: left;
+}
+
+.text-link {
+    color: var(--teal);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.text-link:hover,
+.text-link:focus {
+    text-decoration: underline;
+}
+
+/* =======================
+   Tarjetas y grids
+   ======================= */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature-card,
+.values-grid article,
+.mission-grid article {
+    padding: 26px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(7, 59, 76, 0.06);
+}
+
+.feature-icon {
+    font-size: 2rem;
+}
+
+.card-grid {
+    display: grid;
+    gap: 26px;
+}
+
+.card-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.place-card {
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-4px);
+}
+
+.place-card img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 26px;
+}
+
+.card-kicker {
+    margin-bottom: 8px;
+    color: var(--coral);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.card-body h2,
+.card-body h3 {
+    color: var(--navy);
+}
+
+/* =======================
+   Encabezados internos
+   ======================= */
+
+.page-hero {
+    padding: 76px 0;
+    color: var(--white);
+    background: linear-gradient(120deg, var(--teal), var(--navy));
+}
+
+.page-hero p {
+    max-width: 760px;
+}
+
+/* =======================
+   Servicios
+   ======================= */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.service-card-photo > img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.service-content {
+    padding: 26px;
+}
+
+.service-number {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    background: var(--sand);
+    color: var(--navy);
+    font-weight: 900;
+}
+
+.service-card ul {
+    padding-left: 20px;
+}
+
+.service-card-accent {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.service-card-accent h2,
+.service-card-accent .card-kicker {
+    color: var(--white);
+}
+
+.services-note {
+    margin-top: 34px;
+}
+
+/* =======================
+   Nosotros
+   ======================= */
+
+.two-column,
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 38px;
+    align-items: start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.fact-box,
+.contact-form {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.values-grid article {
+    border-left: 5px solid var(--coral);
+}
+
+.rounded-photo {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.check-list {
+    padding-left: 20px;
+}
+
+/* =======================
+   Formulario
+   ======================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-field-full {
+    grid-column: 1 / -1;
+}
+
+label {
+    color: var(--navy);
+    font-weight: 800;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #b9cbca;
+    border-radius: 12px;
+    color: var(--ink);
+    background: var(--white);
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--teal);
+    outline: 3px solid rgba(17, 138, 138, 0.16);
+}
+
+.submit-btn {
+    margin-top: 24px;
+}
+
+.notice {
+    padding: 18px 20px;
+    border-left: 5px solid var(--coral);
+    border-radius: 12px;
+    background: #fff4e8;
+}
+
+/* =======================
+   Banda fotográfica
+   ======================= */
+
+.photo-band {
+    min-height: 430px;
+    display: grid;
+    align-items: center;
+    color: var(--white);
+    background-image:
+        linear-gradient(rgba(4, 45, 58, 0.48), rgba(4, 45, 58, 0.72)),
+        url("https://upload.wikimedia.org/wikipedia/commons/d/da/Atardecer_en_Monta%C3%B1ita.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-band-content {
+    max-width: 760px;
+}
+
+.photo-band h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+/* =======================
+   Footer
+   ======================= */
+
+.site-footer {
+    padding: 60px 0 24px;
+    color: #dbe7e8;
+    background: var(--navy-dark);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-grid strong {
+    color: var(--white);
+    font-size: 1.3rem;
+}
+
+.footer-title {
+    margin-bottom: 12px;
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.footer-grid a {
+    display: block;
+    width: fit-content;
+    margin: 6px 0;
+    color: #dbe7e8;
+    text-decoration: none;
+}
+
+.footer-grid a:hover,
+.footer-grid a:focus {
+    color: var(--sun);
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    color: #aac1c5;
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   DISEÑO RESPONSIVE OBLIGATORIO
+   ========================================================= */
+
+@media (max-width: 980px) {
+    .nav-wrap {
+        min-height: auto;
+        padding: 14px 0;
+        gap: 12px;
+    }
+
+    .main-nav {
+        gap: 2px;
+    }
+
+    .main-nav a {
+        padding: 8px 10px;
+        font-size: 0.92rem;
+    }
+
+    .feature-grid,
+    .values-grid,
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 760px) {
+    .nav-wrap {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px 0;
+    }
+
+    .brand {
+        justify-content: center;
+    }
+
+    .main-nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .main-nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav a:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .hero {
+        min-height: 560px;
+    }
+
+    .section {
+        padding: 62px 0;
+    }
+
+    .split-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .feature-grid,
+    .card-grid-2,
+    .card-grid-3,
+    .service-grid,
+    .mission-grid,
+    .values-grid,
+    .two-column,
+    .contact-layout,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field-full {
+        grid-column: auto;
+    }
+
+    .place-card img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 520px) {
+    .container {
+        width: min(94%, var(--max-width));
+    }
+
+    .brand-tagline {
+        display: none;
+    }
+
+    .brand-name {
+        font-size: 0.95rem;
+    }
+
+    .hero h1,
+    .page-hero h1 {
+        font-size: 2.45rem;
+    }
+
+    .place-card img {
+        height: 220px;
+    }
+
+    .service-content,
+    .card-body,
+    .contact-form {
+        padding: 22px;
+    }
+}
