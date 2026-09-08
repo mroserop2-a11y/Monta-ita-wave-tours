@@ -61,11 +61,4 @@ Las fotografías se cargan desde Wikimedia Commons y conservan sus licencias ori
 Los servicios, precios e itinerarios son ficticios y referenciales.
 El sitio no implementa reservas reales ni pagos.
 
-## Requisito de mínimo 5 commits
-La rúbrica exige al menos cinco commits. Una forma ordenada de hacerlo es:
 
-1. Estructura del proyecto + `index.html`
-2. `destinos.html`
-3. `servicios.html`
-4. `nosotros.html` + `contacto.html`
-5. `css/styles.css` + `README.md` + revisión final
