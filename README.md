@@ -37,10 +37,11 @@ de contacto/reserva.
 5. `contacto.html` — Formulario HTML5 de contacto / reserva
 
 ## Captura del sitio
-Agregar aquí una captura de la página principal después de publicarla.
+<img width="1285" height="795" alt="Captura de Pantalla 2026-09-07 a la(s) 22 03 57" src="https://github.com/user-attachments/assets/34922cc1-2e5f-4de9-bcd6-ed44c69fcf89" />
+
 
 ## URL del sitio publicado
-Agregar aquí la URL pública de GitHub Pages después de configurarla.
+https://mroserop2-a11y.github.io/Monta-ita-wave-tours/
 
 ## Fuentes de investigación
 - Información pública turística sobre Montañita y la parroquia Manglaralto.
